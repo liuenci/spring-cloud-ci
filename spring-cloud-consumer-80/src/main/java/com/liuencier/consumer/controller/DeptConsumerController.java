@@ -21,7 +21,9 @@ public class DeptConsumerController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String URI_PREFIX = "http://localhost:8001";
+    //    private static final String URI_PREFIX = "http://localhost:8001";
+    // 通过 ribbon 来达到负载均衡的效果
+    private static final String URI_PREFIX = "http://SPRING-CLOUD-PROVIDER-DEPT";
 
     @RequestMapping("get/{id}")
     public Dept get(@PathVariable Long id) {
