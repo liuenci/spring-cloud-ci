@@ -1,14 +1,14 @@
 Server:
-  port: 8001
+  port: 8003
 mybatis:
   type-handlers-package: com.liuencier.springcloud.pojo
   mapper-locations: classpath:mybatis/mapper/*.xml
 spring:
   application:
-    name: spring-cloud-provider-dept
+    name: spring-cloud-provider-dept # 三个服务名称一致是前提
   datasource:
     name: test
-    url: jdbc:mysql://localhost:3306/springcloudci?characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://localhost:3306/springcloudci03?characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: 123456
     # 使用druid数据源
@@ -33,7 +33,7 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: spring-cloud-provider-dept8001
+    instance-id: spring-cloud-provider-dept8003
 # 配置 eureka 的显示信息
 info:
   app.name: cier.site
